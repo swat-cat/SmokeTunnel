@@ -7,7 +7,8 @@ public class SmokeNDKManager {
     static {
         System.loadLibrary("libuv");
         System.loadLibrary("smoke");
+        System.loadLibrary("smoker");
     }
 
-//    public void native init();
+    public native String init();
 }
