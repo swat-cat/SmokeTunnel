@@ -7,14 +7,13 @@ android {
     defaultConfig {
         applicationId "com.example.max_ermakov.smoketunnel"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
 
         ndk {
-            moduleName "uv"
-            moduleName "smoke"
             moduleName "smoker"
+            ldLibs "log"
         }
     }
     buildTypes {
