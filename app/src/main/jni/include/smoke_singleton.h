@@ -28,7 +28,7 @@ private:
     static bool instanceFlag;
     static smoke_singleton *single;
     smoke *smokeInstance;
-    Singleton()
+    smoke_singleton()
     {
         //private constructor
     }
@@ -36,7 +36,7 @@ public:
     static smoke_singleton* getInstance();
     void run();
     void stop();
-    ~Singleton()
+    ~smoke_singleton()
     {
         instanceFlag = false;
     }

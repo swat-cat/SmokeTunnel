@@ -192,12 +192,15 @@ signals:
 	void connection_timeout();
 public slots:
 	void close_smoke();
+protected:
+	void run();
 #else
 class smoke
 {
-#endif
-protected:
+public:
+	void close_smoke();
 	void run();
+#endif
 public:
 	smoke();
 	void smoke_main();
