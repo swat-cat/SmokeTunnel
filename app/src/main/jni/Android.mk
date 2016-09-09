@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE    := libuv
+LOCAL_MODULE    := uv
 LOCAL_SRC_FILES := libs/$(TARGET_ARCH_ABI)/libuv.so
 include $(PREBUILT_SHARED_LIBRARY)
 
@@ -13,7 +13,7 @@ LOCAL_CFLAGS := -DSMOKE_CLIENT
 LOCAL_CFLAGS += -std=c++11
 LOCAL_LDLIBS := -llog -ldl -L.
 LOCAL_SRC_FILES := libs/$(TARGET_ARCH_ABI)/libsmoke.so
-LOCAL_SHARED_LIBRARIES := libuv
+LOCAL_SHARED_LIBRARIES := uv
 LOCAL_LDLIBS := -llog
 include $(PREBUILT_SHARED_LIBRARY)
 
@@ -26,6 +26,6 @@ LOCAL_CFLAGS := -DSMOKE_CLIENT
 LOCAL_CFLAGS += -std=c++11
 LOCAL_LDLIBS := -llog -ldl -L.
 LOCAL_SRC_FILES := smoke.cpp smoke_singleton.cpp smoker.cpp
-LOCAL_SHARED_LIBRARIES := libuv smoke
+LOCAL_SHARED_LIBRARIES := uv smoke
 LOCAL_LDLIBS := -llog
 include $(BUILD_SHARED_LIBRARY)

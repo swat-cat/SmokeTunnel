@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
                 .recursively()
                 .loadLibrary(MainActivity.this, "smoker");
 
+        ReLinker.log(logcatLogger)
+                .force()
+                .recursively()
+                .loadLibrary(MainActivity.this, "libuv");
+
         new Thread(new Runnable() {
             @Override
             public void run() {
