@@ -5,7 +5,7 @@
 #include "smoke.h"
 
 JNIEXPORT jstring JNICALL Java_com_example_max_1ermakov_smoketunnel_SmokeNDKManager_init
-  (JNIEnv *env, jobject)\
+  (JNIEnv *env, jobject)
   {
             smoke* ptr = new smoke();
             ptr->run();

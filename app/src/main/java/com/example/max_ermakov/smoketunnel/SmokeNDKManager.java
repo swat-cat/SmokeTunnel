@@ -6,8 +6,5 @@ import com.getkeepsafe.relinker.ReLinker;
  * Created by max_ermakov on 9/7/16.
  */
 public class SmokeNDKManager {
-    static{
-        System.loadLibrary("smoker");
-    }
     public native String init();
 }
