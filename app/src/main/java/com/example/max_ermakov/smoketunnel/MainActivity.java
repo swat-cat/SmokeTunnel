@@ -13,15 +13,38 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        final SmokeNDKManager smokeNDKManager = new SmokeNDKManager();
-
-        new Thread(new Runnable() {
+        ReLinker.Logger logcatLogger = new ReLinker.Logger() {
             @Override
-            public void run() {
-                String log = smokeNDKManager.init();
-                Log.i("SMOKER: ", log);
+            public void log(String message) {
+                Log.d("ReLinker", message);
             }
-        }).start();
+        };
+
+        ReLinker.log(logcatLogger)
+                .force()
+                .recursively()
+                .loadLibrary(MainActivity.this, "smoker", new ReLinker.LoadListener() {
+                            @Override
+                            public void success() {
+                                /* Yay */
+                                new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        String log = init();
+                                        Log.i("SMOKER: ", log);
+                                    }
+                                }).start();
+                            }
+
+                            @Override
+                            public void failure(Throwable t) {
+                                /* Boo */
+                                t.printStackTrace();
+                            }
+                        }
+                );
+
     }
+
+    public native String init();
 }

@@ -1,8 +1,7 @@
 #ifndef SMOKE_H
 #define SMOKE_H
-extern "C" {
+
 #include "galois.h"
-}
 #include <string.h>
 #include <vector>
 #include <list>
