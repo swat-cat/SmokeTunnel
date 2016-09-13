@@ -1473,7 +1473,6 @@ smoke::smoke()
 
 }
 
-#ifdef SMOKE_QT
 void smoke::close_smoke()
 {
 	uv_stop(ctx.loop);
@@ -1483,7 +1482,8 @@ void smoke::run()
 {
 	smoke_main();
 }
-#else
+
+#ifdef SMOKE_CONSOLE
 int main()
 {
 	smoke that;

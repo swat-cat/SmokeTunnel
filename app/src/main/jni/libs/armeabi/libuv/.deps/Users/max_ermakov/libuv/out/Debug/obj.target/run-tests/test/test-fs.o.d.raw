@@ -1,0 +1,4 @@
+/Users/max_ermakov/libuv/out/Debug/obj.target/run-tests/test/test-fs.o: \
+ ../test/test-fs.c ../include/uv.h ../include/uv-errno.h \
+ ../include/uv-version.h ../include/uv-unix.h ../include/uv-threadpool.h \
+ ../include/uv-linux.h ../include/pthread-barrier.h ../test/task.h
