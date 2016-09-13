@@ -18,7 +18,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/include/ -all
 LOCAL_CPP_FEATURES := rtti
 LOCAL_CPPFLAGS :=  -std=c++11 -DSMOKE_CLIENT
 LOCAL_LDLIBS := -llog
-LOCAL_SRC_FILES := coefficient_table.cpp smoke.cpp smoker.cpp`
+LOCAL_SRC_FILES := coefficient_table.cpp smoke.cpp smoker.cpp
 LOCAL_STATIC_LIBRARIES := uv galois
 LOCAL_LDLIBS := -llog
 include $(BUILD_SHARED_LIBRARY)

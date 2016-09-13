@@ -1483,7 +1483,7 @@ void smoke::run()
 	smoke_main();
 }
 
-#ifdef SMOKE_CONSOLE
+/*#ifdef SMOKE_CONSOLE
 int main()
 {
 	smoke that;
@@ -1553,3 +1553,4 @@ int main()
 	return 0;
 }
 #endif
+*/
