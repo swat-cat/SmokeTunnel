@@ -13,5 +13,5 @@ LOCAL_CPP_FEATURES := rtti
 LOCAL_CPPFLAGS :=  -std=c++11 -DSMOKE_CLIENT
 LOCAL_LDLIBS := -llog -landroid
 LOCAL_SRC_FILES := galois.c coefficient_table.cpp smoke.cpp smoker.cpp
-LOCAL_STATIC_LIBRARIES := uv galois
+LOCAL_STATIC_LIBRARIES := uv
 include $(BUILD_SHARED_LIBRARY)
