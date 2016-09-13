@@ -8,13 +8,13 @@ import com.getkeepsafe.relinker.ReLinker;
 
 public class MainActivity extends Activity {
 
+    final SmokeNDKManager smokeNDKManager = new SmokeNDKManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        final SmokeNDKManager smokeNDKManager = new SmokeNDKManager();
 
         new Thread(new Runnable() {
             @Override
@@ -23,5 +23,11 @@ public class MainActivity extends Activity {
                 Log.i("SMOKER: ", log);
             }
         }).start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+//        smokeNDKManager.close();
     }
 }

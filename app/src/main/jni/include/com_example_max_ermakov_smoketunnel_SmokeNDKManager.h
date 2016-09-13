@@ -15,6 +15,9 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_com_example_max_1ermakov_smoketunnel_SmokeNDKManager_init
   (JNIEnv *, jobject);
 
+JNIEXPORT jstring JNICALL Java_com_example_max_1ermakov_smoketunnel_SmokeNDKManager_close
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif

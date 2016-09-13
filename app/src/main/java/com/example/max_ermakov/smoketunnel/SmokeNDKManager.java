@@ -36,4 +36,6 @@ public class SmokeNDKManager {
     }
 
     public native String init();
+
+    public native String close();
 }
